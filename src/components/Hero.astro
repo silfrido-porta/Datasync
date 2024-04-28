@@ -1,0 +1,84 @@
+<section class="hero">
+    <picture>
+        <source srcset="/banner-1.webp" media="(max-width: 768px)" />
+        <img src="/banner-1.webp" alt="Imagen de Servidores" class="img-banner" />
+    </picture>
+    <div class="wrapper-hero">
+        <h1 class="title-hero">Gestión de soluciones tecnológicas integrales.</h1>
+        <p class="text-hero">Dedicados al diseño, implementación, mantenimiento y gestión de soluciones tecnológicas integrales.</p>
+        <a href="/contacto" class="btn-contacto">Conocé más</a>
+    </div>
+</section>
+<!-- Dedicados al diseño, implementación, mantenimiento y gestión de soluciones tecnológicas integrales.  -->
+
+
+<style>
+    .hero{
+        position: relative;
+        width: 100%;
+        border-radius: var(--border-radius);
+        overflow: hideen;
+    }
+    .hero:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(0,0,0,.1),rgb(3 7 18 / 1));
+    }
+    .img-banner{
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+    }
+    .wrapper-hero{
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    .title-hero{
+        font-size: var(--font-hero);
+        letter-spacing: 0.04rem;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 1.2rem;
+        background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+    }
+    .text-hero{
+        font-size: 1.4rem;
+        color: var(--white);
+        letter-spacing: 0.04rem;
+        line-height: 1.5;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        text-wrap: pretty;
+    }
+    .btn-contacto{
+        font-size: 1.2rem;
+        color: var(--black);
+        letter-spacing: 0.04rem;
+        line-height: 1.5;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .8rem 2rem;
+        border-radius: 50px;
+        width: fit-content;
+        margin-top: 1.6rem;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgba(255,255,255, 1);
+        backdrop-filter: blur(20px);
+    }
+</style>
