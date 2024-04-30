@@ -1,0 +1,149 @@
+<section class="soluciones">
+    <div class="background"></div>
+    <div class="container">
+        <h1 class="title-soluciones">Servicios tecnológicos para colaborar con el crecimiento de las empresas.</h1>
+        <p class="text-soluciones">En Datasnyc ayudamos con el desarrollo de sus proyectos, garantizando absoluta satisfacción en los resultados presentados.</p>
+        
+        <div class="grid-soluciones">
+            <article class="item-soluciones">
+                <div class="card-soluciones">
+                    <div class="card-icon-soluciones">
+                        <img src="/verticales.svg" alt="Icono de Soluciones" class="img-soluciones">
+                    </div>
+                    <div class="card-text-soluciones">
+                        <h2 class="title-card-soluciones">Consultorías y Asesoramientos</h2>
+                        <p class="paragraph-soluciones">Lleve su negocio al siguiente nivel con una estrategia innovadora, nuevas tecnologías y asesores de innovación que ayudan a impulsar su valor comercial.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="item-soluciones">
+                <div class="card-soluciones">
+                    <div class="card-icon-soluciones">
+                        <img src="/verticales.svg" alt="Icono de Soluciones" class="img-soluciones">
+                    </div>
+                    <div class="card-text-soluciones">
+                        <h2 class="title-card-soluciones">Servicio profesional</h2>
+                        <p class="paragraph-soluciones">Ingenieros expertos que se centran en hardware y software de su infraestructura. Son su punto de contacto principal, responsable de la resolución de problemas de múltiples productos y dispositivos en su negocio.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="item-soluciones">
+                <div class="card-soluciones">
+                    <div class="card-icon-soluciones">
+                        <img src="/verticales.svg" alt="Icono de Soluciones" class="img-soluciones">
+                    </div>
+                    <div class="card-text-soluciones">
+                        <h2 class="title-card-soluciones">Verticales de trabajo</h2>
+                        <p class="paragraph-soluciones">Networking - Wireless y Movilidad - Seguridad - Colaboración - Datacenter - Cloud Computing - Infraestructura Física - Cableado Estructurado</p>
+                    </div>
+                </div>
+            </article>
+            <article class="item-soluciones">
+                <div class="card-soluciones">
+                    <div class="card-icon-soluciones">
+                        <img src="/verticales.svg" alt="Icono de Soluciones" class="img-soluciones">
+                    </div>
+                    <div class="card-text-soluciones">
+                        <h2 class="title-card-soluciones">Modalidades</h2>
+                        <p class="paragraph-soluciones">Te ofrecemos soluciones de servicios por paquetes de horas, de acuerdo a la demanda y con contrato de servicios.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<style>
+    .soluciones{
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .title-soluciones{
+        font-size: var(--font-seccion);
+        letter-spacing: 0.04rem;
+        line-height: 1.2;
+        text-align: center;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.2rem;
+        background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 300%;
+		background-position: 0%;
+    }
+    .text-soluciones{
+        font-size: 1rem;
+        color: var(--white);
+        letter-spacing: 0.04rem;
+        line-height: 1.5;
+        text-align: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        text-wrap: pretty;
+    }
+
+    .grid-soluciones{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.4rem;
+        margin-top: 4rem;
+    }
+    .item-soluciones:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 8;
+    }
+    .item-soluciones:nth-child(2){
+        grid-column-start: 8;
+        grid-column-end: 13;
+    }
+    .item-soluciones:nth-child(3){
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    .item-soluciones:nth-child(4){
+        grid-column-start: 6;
+        grid-column-end: 13;
+    }
+
+    /* Card Soluciones */
+    .card-soluciones{
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(255, 255, 255, .1);
+        background: #0f1014b3;
+        backdrop-filter: blur(20px);
+        min-height: 290px;
+    }
+    .card-icon-soluciones{
+        margin-bottom: 1rem;
+    }
+    .img-soluciones{
+        height: 38px;
+        width: auto;
+        object-fit: contain;
+    }
+    .title-card-soluciones{
+        font-size: 1.4ren;
+        letter-spacing: 0.04rem;
+        line-height: 1.2;
+        text-align: left;
+        margin-bottom: 1.2rem;
+        background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 300%;
+		background-position: 0%;
+    }
+    .paragraph-soluciones{
+        font-size: 1rem;
+        color: var(--white);
+        letter-spacing: 0.04rem;
+        line-height: 1.5;
+        text-align: left;
+        text-wrap: pretty;
+    }
+    /* Fin Card Soluciones */
+</style>

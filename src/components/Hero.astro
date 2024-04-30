@@ -17,7 +17,6 @@
         position: relative;
         width: 100%;
         border-radius: var(--border-radius);
-        overflow: hideen;
     }
     .hero:after{
         content: '';
@@ -30,7 +29,7 @@
     }
     .img-banner{
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         object-fit: cover;
     }
     .wrapper-hero{
@@ -72,13 +71,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: .8rem 2rem;
+        padding: .7rem 2rem;
         border-radius: 50px;
         width: fit-content;
-        margin-top: 1.6rem;
+        margin-top: 1.8rem;
         margin-left: auto;
         margin-right: auto;
         background: rgba(255,255,255, 1);
+        border: 1px solid rgba(255, 255, 255, 1);
         backdrop-filter: blur(20px);
+        transition: all .8s;
     }
+    .btn-contacto:hover{
+        color: var(--white);
+        border: 1px solid rgba(255, 255, 255, .5);
+        background: rgba(255, 255, 255, .1);
+        transform: translateY(-5px);
+        transition: all .6s;
+    }
+
 </style>

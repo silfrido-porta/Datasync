@@ -35,6 +35,7 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<div class="background"></div>
 		<Header />
 		
 		<slot />
@@ -49,8 +50,9 @@ const { title, description } = Astro.props;
 		--principal: #26acdd; 
 		--white: #ffffff;
 		--black: #000000;
-		--accent: 35, 174, 223; 
-		--accent-light: 224, 204, 250;
+		--accent: 38, 172, 221; 
+		/* --accent-light: 224, 204, 250; */
+		--accent-light: 255, 255, 255;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(
 			45deg,
@@ -72,7 +74,7 @@ const { title, description } = Astro.props;
 		font-family: system-ui, sans-serif;
 		min-height: 100vh;
 		background-color: rgb(3 7 18 / 1);
-		background-image: radial-gradient(ellipse 80% 80% at 50% -20%, #7877c64d, #fff0);
+		/* background-image: radial-gradient(ellipse 80% 80% at 50% -20%, #7877c64d, #fff0); */
 	}
 	.container{
         max-width: 1180px;
