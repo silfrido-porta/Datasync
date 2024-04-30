@@ -1,34 +1,64 @@
+---
+import Formas from "../components/Formas.astro"
+---
 <section class="informacion">
     <div class="container">
-        <h1 class="title-informacion">Gestión de soluciones tecnológicas integrales.</h1>
-        <p class="text-informacion">Somos una compañía constituida por persona de la experiencia y trayectoria en el mercado tecnológico que nos asociamos con un propósito claro: trabajar con nuestros clientes con profesionalismo y conexión humana, brindando apoyo al área de TI para el alcance de sus resultados. Tenemos experiencias como integradores de varias marcas renombradas mundialmente y contamos con las más altas certificaciones técnicas que avalan nuestros conocimientos.</p>
+        <Formas />
+
+        <div class="wrapper-informacion">
+            <div class="grid-informacion">
+                <div class="item-informacion">
+                    <img src="/nosotros.jpg" alt="Imagen de Informacion de Datasync" class="img-informacion">
+                </div>
+                <div class="item-informacion">
+                    <p class="head-informacion">Sobre Nosotros</p>
+                    <h1 class="title-informacion">Gestión de soluciones tecnológicas integrales.</h1>
+                    <p class="text-informacion">Somos una compañía constituida por persona de la experiencia y trayectoria en el mercado tecnológico que nos asociamos con un propósito claro: trabajar con nuestros clientes con profesionalismo y conexión humana, brindando apoyo al área de TI para el alcance de sus resultados. Tenemos experiencias como integradores de varias marcas renombradas mundialmente y contamos con las más altas certificaciones técnicas que avalan nuestros conocimientos.</p></div>
+            </div>
+        </div>
     </div>
 </section>
 
 <style>
     .informacion{
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: 10rem;
+        padding-bottom: 8rem;
         position: relative;
+        overflow: hidden;
     }
-    .informacion::after{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background: url(/public/lineas.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
+    .wrapper-informacion{
+        position: relative;
+        z-index: 3;
+    }
+    .grid-informacion{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+        align-items: center;
+        gap: 4rem;
+    }
+    .img-informacion{
         width: 100%;
-        height: 100%;
-        opacity: .2;
-        z-index: 1;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 1.1;
+        border-radius: var(--border-radius);
+    }
+    .head-informacion{
+        font-size: .9rem;
+        color: var(--principal);
+        display: inline-block;
+        padding: .6rem 1rem;
+        margin-bottom: 1rem;
+        background: #0f1014b3;
+        border-radius: 50px;
+        border: 0.001rem solid rgba(255, 255, 255, .1);
+        backdrop-filter: blur(20px);
     }
     .title-informacion{
         font-size: var(--font-seccion);
         letter-spacing: 0.04rem;
         line-height: 1.2;
-        text-align: center;
+        text-align: left;
         margin-bottom: 1.2rem;
         background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -41,9 +71,7 @@
         color: var(--white);
         letter-spacing: 0.04rem;
         line-height: 1.5;
-        text-align: center;
-        width: 70%;
-        margin: 0 auto;
+        text-align: left;
         text-wrap: pretty;
     }
 </style>
