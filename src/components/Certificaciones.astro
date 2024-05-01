@@ -1,0 +1,176 @@
+---
+import Formas from "../components/Formas.astro"
+---
+<section class="certificaciones">
+    <div class="container">
+        <Formas />
+
+        <div class="wrapper-certificaciones">
+            <div class="head-certificaciones">Certificaciones</div>
+            <h2 class="title-certificaciones">La satisfacción de nuestros clientes es el impulso que nos lleva a mejorar.</h2>
+            
+            <div class="grid-certificaciones">
+                <article class="item-certificaciones">
+                    <div class="card-certificaciones">
+                        <div class="card-icon-certificaciones">
+                            <img src="/cert-1.png" alt="Icono de certificaciones" loading="lazy" class="img-certificaciones">
+                        </div>
+                    </div>
+                </article>
+                <article class="item-certificaciones">
+                    <div class="card-certificaciones">
+                        <div class="card-icon-certificaciones">
+                            <img src="/cert-2.png" alt="Icono de certificaciones" loading="lazy" class="img-certificaciones">
+                        </div>
+                    </div>
+                </article>
+                <article class="item-certificaciones">
+                    <div class="card-certificaciones">
+                        <div class="card-icon-certificaciones">
+                            <img src="/cert-3.png" alt="Icono de certificaciones" loading="lazy" class="img-certificaciones">
+                        </div>
+                    </div>
+                </article>
+                <article class="item-certificaciones">
+                    <div class="card-certificaciones">
+                        <div class="card-icon-certificaciones">
+                            <img src="/cert-4.png" alt="Icono de certificaciones" loading="lazy" class="img-certificaciones">
+                        </div>
+                    </div>
+                </article>
+                <article class="item-certificaciones">
+                    <div class="card-certificaciones">
+                        <div class="card-icon-certificaciones">
+                            <img src="/cert-5.png" alt="Icono de certificaciones" loading="lazy" class="img-certificaciones">
+                        </div>
+                    </div>
+                </article>
+                <article class="item-certificaciones">
+                    <div class="card-certificaciones">
+                        <div class="card-icon-certificaciones">
+                            <img src="/cert-6.png" alt="Icono de certificaciones" loading="lazy" class="img-certificaciones">
+                        </div>
+                    </div>
+                </article>
+                <article class="item-certificaciones">
+                    <div class="card-certificaciones">
+                        <div class="card-icon-certificaciones">
+                            <img src="/cert-7.png" alt="Icono de certificaciones" class="img-certificaciones">
+                        </div>
+                    </div>
+                </article>
+                <article class="item-certificaciones">
+                    <div class="card-certificaciones">
+                        <div class="card-icon-certificaciones">
+                            <img src="/cert-8.png" alt="Icono de certificaciones" class="img-certificaciones">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .certificaciones{
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .wrapper-certificaciones{
+        position: relative;
+        z-index: 3;
+    }
+    .head-certificaciones{
+        font-size: .9rem;
+        color: var(--principal);
+        letter-spacing: 0.04rem;
+        display: block;
+        width: fit-content;
+        padding: .6rem 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        background: rgba(255, 255, 255, .03);
+        border-radius: 50px;
+        border: 0.001rem solid rgba(255, 255, 255, .1);
+        backdrop-filter: blur(20px); 
+    }
+    .title-certificaciones{
+        font-size: var(--font-seccion);
+        letter-spacing: 0.04rem;
+        line-height: 1.2;
+        text-align: center;
+        width: 62%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.2rem;
+        background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 300%;
+		background-position: 0%;
+    }
+    .text-certificaciones{
+        font-size: 1rem;
+        color: var(--white);
+        letter-spacing: 0.04rem;
+        line-height: 1.5;
+        text-align: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        text-wrap: pretty;
+    }
+
+    .grid-certificaciones{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.4rem;
+        margin-top: 2.6rem;
+    }
+    .item-certificaciones:nth-child(6){
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .item-certificaciones:nth-child(7){
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .item-certificaciones:nth-child(8){
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    /* Card certificaciones */
+    .card-certificaciones{
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(255, 255, 255, .1);
+        background: #0f1014b3;
+        backdrop-filter: blur(20px);
+        position: relative;
+        transition: .6s;
+    }
+    .card-certificaciones:hover{
+        background: rgba(255, 255, 255, .04);
+        border: 1px solid rgba(255, 255, 255, .4);
+    }
+
+
+    .card-icon-certificaciones{
+        text-align: center;
+    }
+    .img-certificaciones{
+        height: 90px;
+        width: auto;
+        object-fit: contain;
+        transition: all 1s;
+    }
+    .card-certificaciones:hover .img-certificaciones{
+        transform: scale(1.125);
+        transition: all .6s;
+    }
+
+    /* Fin Card certificaciones */
+</style>

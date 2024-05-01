@@ -1,14 +1,15 @@
 <section class="soluciones">
-    <div class="background"></div>
     <div class="container">
-        <h1 class="title-soluciones">Servicios tecnológicos para colaborar con el crecimiento de las empresas.</h1>
-        <p class="text-soluciones">En Datasnyc ayudamos con el desarrollo de sus proyectos, garantizando absoluta satisfacción en los resultados presentados.</p>
+        <div class="head-soluciones">Soluciones</div>
+        <!-- <h1 class="title-soluciones">Servicios tecnológicos para colaborar con el crecimiento de las empresas.</h1> -->
+        <h2 class="title-soluciones">En Datasnyc te ayudamos con el desarrollo de sus proyectos.</h2>
+        <!-- <p class="text-soluciones">En Datasnyc ayudamos con el desarrollo de sus proyectos, garantizando absoluta satisfacción en los resultados presentados.</p> -->
         
         <div class="grid-soluciones">
             <article class="item-soluciones">
                 <div class="card-soluciones">
                     <div class="card-icon-soluciones">
-                        <img src="/verticales.svg" alt="Icono de Soluciones" class="img-soluciones">
+                        <img src="/verticales.svg" alt="Icono de Soluciones" loading="lazy" class="img-soluciones">
                     </div>
                     <div class="card-text-soluciones">
                         <h2 class="title-card-soluciones">Consultorías y Asesoramientos</h2>
@@ -19,10 +20,10 @@
             <article class="item-soluciones">
                 <div class="card-soluciones">
                     <div class="card-icon-soluciones">
-                        <img src="/verticales.svg" alt="Icono de Soluciones" class="img-soluciones">
+                        <img src="/verticales.svg" alt="Icono de Soluciones" loading="lazy" class="img-soluciones">
                     </div>
                     <div class="card-text-soluciones">
-                        <h2 class="title-card-soluciones">Servicio profesional</h2>
+                        <h2 class="title-card-soluciones">Máxima Eficiencia Tecnológica</h2>
                         <p class="paragraph-soluciones">Ingenieros expertos que se centran en hardware y software de su infraestructura. Son su punto de contacto principal, responsable de la resolución de problemas de múltiples productos y dispositivos en su negocio.</p>
                     </div>
                 </div>
@@ -30,7 +31,7 @@
             <article class="item-soluciones">
                 <div class="card-soluciones">
                     <div class="card-icon-soluciones">
-                        <img src="/verticales.svg" alt="Icono de Soluciones" class="img-soluciones">
+                        <img src="/verticales.svg" alt="Icono de Soluciones" loading="lazy" class="img-soluciones">
                     </div>
                     <div class="card-text-soluciones">
                         <h2 class="title-card-soluciones">Verticales de trabajo</h2>
@@ -41,11 +42,11 @@
             <article class="item-soluciones">
                 <div class="card-soluciones">
                     <div class="card-icon-soluciones">
-                        <img src="/verticales.svg" alt="Icono de Soluciones" class="img-soluciones">
+                        <img src="/verticales.svg" alt="Icono de Soluciones" loading="lazy" class="img-soluciones">
                     </div>
                     <div class="card-text-soluciones">
-                        <h2 class="title-card-soluciones">Modalidades</h2>
-                        <p class="paragraph-soluciones">Te ofrecemos soluciones de servicios por paquetes de horas, de acuerdo a la demanda y con contrato de servicios.</p>
+                        <h2 class="title-card-soluciones">Adaptados a tus Necesidades</h2>
+                        <p class="paragraph-soluciones">Soluciones de servicios tecnológicos personalizados, adaptados tanto por paquetes de horas como según tu demanda específica. Nuestros servicios están respaldados por contratos que garantizan un alto nivel de atención y satisfacción.</p>
                     </div>
                 </div>
             </article>
@@ -55,8 +56,23 @@
 
 <style>
     .soluciones{
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .head-soluciones{
+        font-size: .9rem;
+        color: var(--principal);
+        letter-spacing: 0.04rem;
+        display: block;
+        width: fit-content;
+        padding: .6rem 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        background: rgba(255, 255, 255, .03);
+        border-radius: 50px;
+        border: 0.001rem solid rgba(255, 255, 255, .1);
+        backdrop-filter: blur(20px); 
     }
     .title-soluciones{
         font-size: var(--font-seccion);
@@ -89,7 +105,7 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: 1.4rem;
-        margin-top: 4rem;
+        margin-top: 2.6rem;
     }
     .item-soluciones:nth-child(1){
         grid-column-start: 1;
@@ -116,6 +132,12 @@
         background: #0f1014b3;
         backdrop-filter: blur(20px);
         min-height: 290px;
+        transition: all .3s;
+    }
+    .card-soluciones:hover{
+        background: rgba(255, 255, 255, .04);
+        border: 1px solid rgba(255, 255, 255, .4);
+        transition: all .6s;
     }
     .card-icon-soluciones{
         margin-bottom: 1rem;
@@ -126,7 +148,7 @@
         object-fit: contain;
     }
     .title-card-soluciones{
-        font-size: 1.4ren;
+        font-size: 1.4rem;
         letter-spacing: 0.04rem;
         line-height: 1.2;
         text-align: left;
@@ -134,7 +156,7 @@
         background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		background-size: 300%;
+		background-size: 200%;
 		background-position: 0%;
     }
     .paragraph-soluciones{

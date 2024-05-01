@@ -8,7 +8,7 @@ import Formas from "../components/Formas.astro"
         <div class="wrapper-informacion">
             <div class="grid-informacion">
                 <div class="item-informacion">
-                    <img src="/nosotros.jpg" alt="Imagen de Informacion de Datasync" class="img-informacion">
+                    <img src="/nosotros.jpg" alt="Imagen de Informacion de Datasync"  loading="lazy" class="img-informacion">
                 </div>
                 <div class="item-informacion">
                     <p class="head-informacion">Sobre Nosotros</p>
@@ -46,10 +46,11 @@ import Formas from "../components/Formas.astro"
     .head-informacion{
         font-size: .9rem;
         color: var(--principal);
+        letter-spacing: 0.04rem;
         display: inline-block;
         padding: .6rem 1rem;
         margin-bottom: 1rem;
-        background: #0f1014b3;
+        background: rgba(255, 255, 255, .03);
         border-radius: 50px;
         border: 0.001rem solid rgba(255, 255, 255, .1);
         backdrop-filter: blur(20px);
