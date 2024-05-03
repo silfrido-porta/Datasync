@@ -173,4 +173,23 @@ import Formas from "../components/Formas.astro"
     }
 
     /* Fin Card certificaciones */
+
+    @media screen and (max-width:768px) {
+        .certificaciones{
+            padding-top: 5rem;
+            padding-bottom: 4rem;
+        }
+        .title-certificaciones{
+            width: 100%;
+        }
+        .grid-certificaciones{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+        }
+        .img-certificaciones{
+            height: 80px;
+        }
+    }
 </style>

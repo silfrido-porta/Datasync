@@ -1,0 +1,198 @@
+---
+const navItems = [
+  {
+    title: "Inicio",
+    label: "inicio",
+    url: "/#inicio",
+  },
+  {
+    title: "Soluciones",
+    label: "soluciones",
+    url: "/#soluciones",
+  },
+  {
+    title: "Nosotros",
+    label: "nosotros",
+    url: "/#nosotros",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:miduga@gmail.com",
+  },
+]
+---
+
+<header class="header">
+  <nav class="nav">
+    <a aria-label="Datasync" href="/">
+      <img src="/logo.svg" height="60" width="195" class="logo" alt="Logo Datasyng">
+    </a>
+    
+    <button class="btn-menu">
+      <span class="linea-1"></span>
+      <span class="linea-2"></span>
+      <span class="linea-3"></span>
+    </button>
+
+    <ul class="list-nav">
+      {
+        navItems.map((link) => (
+          <li>
+            <a aria-label={link.label} href={link.url}>
+              {link.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .header{
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding: .5rem 1.6rem;
+    position: fixed;
+    top: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    border-radius: 50px;
+    background: #0f1014b3;
+    border: 0.001rem solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
+  }
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .list-nav{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .list-nav li a{
+    color: #fff;
+    letter-spacing: 0.04rem;
+    text-decoration: none;
+    opacity: .9;
+    transition: all .3s;
+  }
+  .list-nav li a:hover{
+    opacity: 1;
+    color: var(--principal);
+  }
+
+  .btn-menu{
+    width: 24px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-left: auto;
+    background: transparent;
+    position: relative;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: transform .5s ease, opacity .3s ease;
+    transform: translateY(0) rotate(0deg);
+    will-change: transform;
+  }
+  .btn-menu span{
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    background: hsla(0, 0%, 100%, .9);
+    transition: transform .5s, opacity .25s;
+    transform: translate(-50%, -50%);
+    will-change: normal;
+  }
+  .linea-1{
+    top: 10%;
+  }
+  .linea-2{
+    top: 50%;
+  }
+  .linea-3{
+    top: 90%;
+  }
+
+  .btn-menu.open .linea-1{
+    top: 50%;
+    transform: translate(-50%) rotate(-45deg);
+  }
+  .btn-menu.open .linea-2{
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%);
+  }
+  .btn-menu.open .linea-3{
+    top: 50%;
+    transform: translate(-50%) rotate(45deg);
+  }
+
+  @media screen and (max-width:768px) {
+    .header{
+      width: 94%;
+      margin: 0 auto;
+      border-radius: var(--border-radius);
+      padding-top: .6rem;
+      padding-bottom: .6rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .nav{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .logo{
+      height: 40px;
+      width: auto;
+    }
+    .list-nav{
+      flex-direction: column;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      height: 0;
+      overflow: hidden;
+      transition: height .3s;
+    }
+    .list-nav li:last-child a{
+      display: block;
+      padding-bottom: 2rem;
+    }
+    .list-nav.open{
+      height: 220px;
+    }
+
+  }
+</style>
+
+<script>
+  const btnMenu = document.querySelector(".btn-menu");
+  const menuBody = document.querySelector('.list-nav');
+
+    // Al hacer clic en el botón de menú
+  btnMenu.addEventListener('click', () => {
+    menuBody.classList.toggle('open');
+    btnMenu.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.list-nav li a').forEach((item) => {
+    item.addEventListener('click', (event) => {
+      btnMenu.classList.remove('open');
+    });
+  });
+</script>
