@@ -80,6 +80,7 @@
         margin-right: auto;
         background: rgba(255,255,255, 1);
         border: 1px solid rgba(255, 255, 255, 1);
+        -webkit-backdrop-filter: blur(20px); 
         backdrop-filter: blur(20px);
         transition: all .8s;
     }
@@ -91,8 +92,13 @@
         transition: all .6s;
     }
     @media screen and (max-width:768px) {
+        .img-banner{
+            height: 70vh;
+        }
         .wrapper-hero{
-            width: 100%;
+            width: 98%;
+            top: 60%;
+            margin: 0 auto;
         }
         .text-hero{
             font-size: 1rem;
@@ -100,6 +106,7 @@
         }
         .btn-contacto{
             font-size: 1rem;
+            padding: .5rem 1.6rem;
         }
     }
 
