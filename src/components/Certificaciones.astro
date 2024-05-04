@@ -128,24 +128,44 @@ import Formas from "../components/Formas.astro"
     .grid-certificaciones{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 60px);
+        grid-template-areas: '. c2 c3 c4 .'
+                             'c1 c2 c3 c4 c8'
+                             'c1 c5 c6 c7 c8'
+                             '. c5 c6 c7 .';
         gap: 1.4rem;
         margin-top: 2.6rem;
     }
+    .item-certificaciones:nth-child(1){
+        grid-area: c1;
+    }
+    .item-certificaciones:nth-child(2){
+        grid-area: c2;
+    }
+    .item-certificaciones:nth-child(3){
+        grid-area: c3;
+    }
+    .item-certificaciones:nth-child(4){
+        grid-area: c4;
+    }
+    .item-certificaciones:nth-child(5){
+        grid-area: c5;
+    }
     .item-certificaciones:nth-child(6){
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-area: c6;
     }
     .item-certificaciones:nth-child(7){
-        grid-column-start: 3;
-        grid-column-end: 4;
+        grid-area: c7;
     }
     .item-certificaciones:nth-child(8){
-        grid-column-start: 4;
-        grid-column-end: 5;
+        grid-area: c8;
     }
     /* Card certificaciones */
     .card-certificaciones{
-        padding: 2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: var(--border-radius);
         border: 1px solid rgba(255, 255, 255, .1);
         background: #0f1014b3;
@@ -189,6 +209,9 @@ import Formas from "../components/Formas.astro"
             flex-wrap: wrap;
             justify-content: center;
             gap: 1.2rem;
+        }
+        .card-certificaciones{
+            padding: 2rem;
         }
         .img-certificaciones{
             height: 86px;

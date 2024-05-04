@@ -1,7 +1,7 @@
 ---
 import Formas from "../components/Formas.astro"
 ---
-<section class="informacion">
+<section class="informacion" id="nosotros">
     <div class="container">
         <Formas />
 
@@ -11,9 +11,11 @@ import Formas from "../components/Formas.astro"
                     <img src="/nosotros.jpg" alt="Imagen de Informacion de Datasync"  loading="lazy" class="img-informacion">
                 </div>
                 <div class="item-informacion">
-                    <p class="head-informacion">Sobre Nosotros</p>
-                    <h1 class="title-informacion">Gestión de soluciones tecnológicas integrales.</h1>
-                    <p class="text-informacion">Somos una compañía constituida por persona de la experiencia y trayectoria en el mercado tecnológico que nos asociamos con un propósito claro: trabajar con nuestros clientes con profesionalismo y conexión humana, brindando apoyo al área de TI para el alcance de sus resultados. Tenemos experiencias como integradores de varias marcas renombradas mundialmente y contamos con las más altas certificaciones técnicas que avalan nuestros conocimientos.</p></div>
+                    <div class="container-informacion">
+                        <p class="head-informacion">Sobre Nosotros</p>
+                        <h1 class="title-informacion">Gestión de soluciones tecnológicas integrales.</h1>
+                        <p class="text-informacion">Somos una compañía constituida por persona de la experiencia y trayectoria en el mercado tecnológico que nos asociamos con un propósito claro: trabajar con nuestros clientes con profesionalismo y conexión humana, brindando apoyo al área de TI para el alcance de sus resultados. Tenemos experiencias como integradores de varias marcas renombradas mundialmente y contamos con las más altas certificaciones técnicas que avalan nuestros conocimientos.</p></div>
+                    </div>
             </div>
         </div>
     </div>
@@ -25,6 +27,7 @@ import Formas from "../components/Formas.astro"
         padding-bottom: 8rem;
         position: relative;
         overflow: hidden;
+        scroll-margin-block: 6rem;
     }
     .wrapper-informacion{
         position: relative;
@@ -34,7 +37,7 @@ import Formas from "../components/Formas.astro"
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
         align-items: center;
-        gap: 4rem;
+        gap: 1.4rem;
     }
     .img-informacion{
         width: 100%;
@@ -42,6 +45,9 @@ import Formas from "../components/Formas.astro"
         object-fit: cover;
         aspect-ratio: 1.1;
         border-radius: var(--border-radius);
+    }
+    .container-informacion{
+        padding-left: 2.4rem;
     }
     .head-informacion{
         font-size: .9rem;
@@ -81,6 +87,12 @@ import Formas from "../components/Formas.astro"
         .informacion{
             padding-top: 4rem;
             padding-bottom: 4rem;
+        }
+        .grid-informacion{
+            gap: 4rem;
+        }
+        .container-informacion{
+            padding-left: 0;
         }
         .text-informacion{
             font-size: 1rem;

@@ -1,0 +1,168 @@
+<section class="contacto" id="contacto">
+    <div class="container">
+        <div class="grid-contacto">
+            <div class="item-contacto">
+                <p class="head-contacto">Contacto</p>
+                <h1 class="title-contacto">Gestión de soluciones tecnológicas integrales.</h1>
+                <p class="text-contacto">Somos una compañía constituida por persona de la experiencia y trayectoria en el mercado tecnológico que nos asociamos con un propósito claro: trabajar con nuestros clientes con profesionalismo y conexión humana, brindando apoyo al área de TI para el alcance de sus resultados. Tenemos experiencias como integradores de varias marcas renombradas mundialmente y contamos con las más altas certificaciones técnicas que avalan nuestros conocimientos.</p>
+            </div>
+            <div class="item-contacto">
+                <div class="container-form">
+                    <form action="#" class="form">
+                        <h2 class="title-form">Completá el formulario con tus datos para comunicaremos contigo.</h2>
+                        <div class="form-group">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" name="nombre" id="nombre" required placeholder="Escriba su nombre" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" name="email" id="email" required placeholder="Escriba su email" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea name="mensaje" id="mensaje" required placeholder="Escriba su mensaje" autocomplete="off"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn-enviar">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .contacto{
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .grid-contacto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.4rem;
+    }
+    .container-form{
+        padding-left: 2.4rem;
+    }
+    .head-contacto{
+        font-size: .9rem;
+        color: var(--principal);
+        letter-spacing: 0.04rem;
+        display: block;
+        width: fit-content;
+        padding: .6rem 1rem;
+        margin-bottom: 1rem;
+        background: rgba(255, 255, 255, .03);
+        border-radius: 50px;
+        border: 0.001rem solid rgba(255, 255, 255, .1);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+    }
+    .title-contacto{
+        font-size: var(--font-seccion);
+        letter-spacing: 0.04rem;
+        line-height: 1.2;
+        margin-bottom: 1.2rem;
+        background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+    }
+    .text-contacto{
+        font-size: 1.2rem;
+        color: var(--white);
+        letter-spacing: 0.04rem;
+        line-height: 1.5;
+        text-wrap: pretty;
+    }
+
+    /* Formulario */
+    .form{
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(255, 255, 255, .1);
+        background: #0f1014b3;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        position: relative;
+        transition: .6s;
+    }
+    .title-form{
+        font-size: 1.4rem;
+        letter-spacing: 0.04rem;
+        line-height: 1.4;
+        margin-bottom: 1.4rem;
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    .form-group{
+        margin-bottom: 1rem;
+    }
+    .form-group label{
+        display: block;
+        color: var(--white);
+        letter-spacing: 0.04rem;
+        margin-bottom: .8rem;
+    }
+    .form-group input{
+        height: 46px;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, .5);
+        border-radius: var(--border-radius);
+        padding-left: 1rem;
+        font-size: 1rem;
+        letter-spacing: 0.04rem;
+        color: #000;
+    }
+    .form-group input::placeholder{
+        font-size: .95rem;
+    }
+    .form-group textarea{
+        height: 80px;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, .5);
+        border-radius: var(--border-radius);
+        padding-top: 1rem;
+        padding-left: 1rem;
+        font-family: "Onest Variable";
+        font-size: 1rem;
+        letter-spacing: 0.04rem;
+        color: #000;
+    }
+    .form-group textarea::placeholder{
+        font-size: .95rem;
+    }
+
+    .btn-enviar{
+        font-size: .95rem;
+        color: var(--black);
+        letter-spacing: 0.04rem;
+        line-height: 1.5;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .7rem 2rem;
+        border-radius: 50px;
+        width: fit-content;
+        margin-top: 1.8rem;
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(255, 255, 255, 1);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        transition: all .8s;
+    }
+    .btn-enviar:hover {
+        color: var(--white);
+        border: 1px solid rgba(255, 255, 255, .5);
+        background: rgba(255, 255, 255, .1);
+        transform: translateY(-5px);
+        transition: all .6s;
+    }
+</style>

@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/onest": "^5.0.4",
     "astro": "^4.6.1"
+  },
+  "devDependencies": {
+    "@types/scrollreveal": "^0.0.11"
   }
 }
