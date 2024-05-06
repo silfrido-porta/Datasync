@@ -73,7 +73,7 @@
 <style>
     .contacto{
         padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
     }
     .grid-contacto{
         display: grid;
@@ -277,7 +277,7 @@
         }
     }
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:990px) {
         .title-contacto{
             font-size: 1.7rem;
         }
@@ -295,9 +295,12 @@
             align-items: flex-start;
             padding: 0;
             border: 0;
+            background: transparent;
         }
         .lista-contacto li a svg{
             fill: var(--white);
+            position: relative;
+            top: 2px;
             transition: all .3s;
         }
         .btn-enviar{

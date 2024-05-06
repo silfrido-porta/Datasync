@@ -1,14 +1,96 @@
+---
+const navItems = [
+  {
+    title: "Inicio",
+    label: "inicio",
+    url: "/#inicio",
+  },
+  {
+    title: "Soluciones",
+    label: "soluciones",
+    url: "/#soluciones",
+  },
+  {
+    title: "Nosotros",
+    label: "nosotros",
+    url: "/#nosotros",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "/#contacto",
+  },
+]
+---
 <footer>
-    Footer
+    <div class="container">
+        <div class="grid-footer">
+            <article class="item-footer">
+                <ul class="list-footer">
+                    {
+                      navItems.map((link) => (
+                        <li>
+                          <a aria-label={link.label} href={link.url}>
+                            {link.title}
+                          </a>
+                        </li>
+                      ))
+                    }
+                  </ul>
+            </article>
+            <article class="item-footer">
+                <h2 class="title-footer">Diseñado por: </h2>
+            </article>
+        </div>
+    </div>
 </footer>
 
 <style>
     footer{
-        padding: 1rem 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         background: url(/public/fondo-footer.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
+    }
+    .grid-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .list-footer{
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        column-gap: 1.4rem;
+    }
+    .list-footer li a{
+        color: var(--white);
+        font-size: .9rem;
+        line-height: 0.02rem;
+        text-decoration: none;
+        transition: color .3s;
+    }
+    .list-footer li a:hover{
+        color: var(--principal);
+    }
+    .title-footer{
+        
+        font-size: .9rem;
+        color: var(--white);
+        letter-spacing: 0.02rem;
+        margin-bottom: 0;
+    }
+    @media screen and (max-width:768px) {
+        .grid-footer{
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.6rem;
+        }
     }
 </style>

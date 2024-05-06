@@ -205,13 +205,18 @@ import Formas from "../components/Formas.astro"
             width: 100%;
         }
         .grid-certificaciones{
-            display: flex;
-            flex-wrap: wrap;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: unset;
+            grid-template-areas: unset;
             justify-content: center;
             gap: 1.2rem;
         }
+        .grid-certificaciones .item-certificaciones{
+            width: 100%;
+            grid-area: unset;
+        }
         .card-certificaciones{
-            padding: 2rem;
+            padding: 1.4rem;
         }
         .img-certificaciones{
             height: 86px;
