@@ -43,19 +43,19 @@
                 <div class="container-form">
                     <form action="#" class="form">
                         <div class="form-group">
-                            <label for="nombre">Nombre *</label>
+                            <label for="nombre">Nombre y Apellido</label>
                             <input type="text" name="nombre" id="nombre" required placeholder="Escriba su nombre" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email *</label>
+                            <label for="email">Email</label>
                             <input type="email" name="email" id="email" required placeholder="Escriba su email" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label for="tel">Teléfono *</label>
+                            <label for="tel">Teléfono</label>
                             <input type="tel" name="tel" id="tel" required placeholder="Escriba su número" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label for="mensaje">Mensaje *</label>
+                            <label for="mensaje">Mensaje</label>
                             <textarea name="mensaje" id="mensaje" required placeholder="Escriba su mensaje" autocomplete="off"></textarea>
                         </div>
                         <div class="form-group">
@@ -176,10 +176,20 @@
         margin-bottom: 0;
     }
     .form-group label{
-        display: block;
+        display: inline-block;
         color: var(--white);
         letter-spacing: 0.04rem;
+        padding-right: 1rem;
         margin-bottom: .8rem;
+        position: relative;
+    }
+    .form-group label::after{
+        content: '*';
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: var(--principal);
+        font-size: 20px;
     }
     .form-group input{
         height: 48px;
@@ -303,11 +313,13 @@
             top: 2px;
             transition: all .3s;
         }
-        .btn-enviar{
-            width: 100%;
-        }
         .btn-enviar::after{
             min-height: 60vh;
+        }
+    }
+    @media screen and (max-width:500px) {
+        .btn-enviar{
+            width: 100%;
         }
     }
 </style>
