@@ -23,9 +23,12 @@ const navItems = [
 ]
 ---
 <footer>
+  <picture>
+    <source srcset="/fondo-footer-mobile.png" media="(max-width: 990px)" />
     <img src="/fondo-footer.png" alt="Imagen de fondo" class="img-footer" loading="lazy">
+  </picture>
 
-    <div class="container-footer">
+  <div class="container-footer">
       <div class="grid-footer">
         <article class="item-footer">
           
@@ -63,10 +66,6 @@ const navItems = [
       width: 100%;
       margin: 0px auto;
       padding: 0px 1rem;
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
     .grid-footer{
       display: flex;
