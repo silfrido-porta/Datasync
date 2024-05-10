@@ -23,11 +23,6 @@ const navItems = [
 ]
 ---
 <footer>
-  <picture>
-    <source srcset="/fondo-footer-mobile.png" media="(max-width: 990px)" />
-    <img src="/fondo-footer.png" alt="Imagen de fondo" class="img-footer" loading="lazy">
-  </picture>
-
   <div class="container-footer">
       <div class="grid-footer">
         <article class="item-footer">
@@ -45,7 +40,7 @@ const navItems = [
           </ul>
         </article>
           <article class="item-footer">
-              <h2 class="title-footer">Diseñado por: </h2>
+              <a href="mailto:silfridobenitez65@gmail.com" class="title-footer" target="blank" rel="noopener nofollow">Diseñado por Chio</a>
           </article>
       </div>
     </div>
@@ -54,6 +49,12 @@ const navItems = [
 <style>
     footer{
       position: relative;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+      background-image: url(/public/fondo-footer.png);
+      background-size: cover;
+      background-repeat: repeat;
+      background-attachment: fixed;
     }
     .img-footer{
       width: 100%;
@@ -65,7 +66,8 @@ const navItems = [
       max-width: 1180px;
       width: 100%;
       margin: 0px auto;
-      padding: 0px 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
     .grid-footer{
       display: flex;
@@ -86,10 +88,25 @@ const navItems = [
       font-size: .9rem;
       line-height: 0.02rem;
       text-decoration: none;
+      position: relative;
       transition: color .3s;
+    }
+    .list-footer li a::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--principal);
+      transition: all .3s;
     }
     .list-footer li a:hover{
       color: var(--principal);
+    }
+    .list-footer li a:hover::after{
+      width: 100%;
+      transition: all .3s;
     }
     .title-footer{
       font-size: .9rem;
@@ -97,6 +114,26 @@ const navItems = [
       color: var(--white);
       letter-spacing: 0.02rem;
       margin-bottom: 0;
+      position: relative;
+      transition: all .3s;
+      text-decoration: none;
+    }
+    .title-footer::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--principal);
+      transition: all .3s;
+    }
+    .title-footer:hover{
+      color: var(--principal);
+    }
+    .title-footer:hover::after{
+      width: 100%;
+      transition: all .3s;
     }
     @media screen and (max-width:768px) {
       .container-footer{
